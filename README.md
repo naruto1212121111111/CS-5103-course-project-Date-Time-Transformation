@@ -25,8 +25,3 @@ Finally, the code prints the converted datetime string in the desired format. Th
 
 The output of the code is the converted datetime string in the format YYYY-MM-DD HH:MM:SS TimezoneAbbreviation +/-HHMM, where TimezoneAbbreviation is the abbreviation for the target timezone and +/-HHMM is the offset from UTC.
 
-
-Testcases:
-
-I just run the test cases with the disered file give test_your_code.py
-all the test cases passed.
