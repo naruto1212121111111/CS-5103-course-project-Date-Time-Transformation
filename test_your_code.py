@@ -1,21 +1,39 @@
-import date_timezone
+import unittest
+from datetime import datetime
+import pytz
+from date_timezone import transform_datetime
 
 
-def test_transform_datetime():
-    # First test case
-    input_str = "2023-03-11 15:30:00"
-    original_timezone_str = "US/Pacific"
-    target_timezone_str = "Asia/Kolkata"
-    expected_output_str = "2023-03-12 04:00:00 IST+0530"
-    actual_output_str = date_timezone.transform_datetime(
-        input_str, original_timezone_str, target_timezone_str)
-    assert actual_output_str == expected_output_str, f"Expected {expected_output_str}, but got {actual_output_str}"
+class TestTransformDateTime(unittest.TestCase):
 
-    # Second test case
-    input_str = "2022-12-31 23:59:59"
-    original_timezone_str = "America/New_York"
-    target_timezone_str = "Asia/Kolkata"
-    expected_output_str = "2023-01-01 10:29:59 IST+0530"
-    actual_output_str = date_timezone.transform_datetime(
-        input_str, original_timezone_str, target_timezone_str)
-    assert actual_output_str == expected_output_str, f"Expected {expected_output_str}, but got {actual_output_str}"
+    def test_transform_datetime_utc_to_pacific(self):
+        result = transform_datetime("2023-03-11 16:30:00", "UTC", "US/Pacific")
+        expected = "03/11/2023 Saturday 08:30"
+        self.assertEqual(result, expected)
+
+    def test_transform_datetime_pacific_to_utc(self):
+        result = transform_datetime("2023-03-11 16:30:00", "US/Pacific", "UTC")
+        expected = "03/12/2023 Sunday 00:30"
+        self.assertEqual(result, expected)
+
+    def test_transform_datetime_utc_to_london(self):
+        result = transform_datetime("2023-03-11 16:30:00", "UTC",
+                                    "Europe/London")
+        expected = "03/11/2023 Saturday 16:30"
+        self.assertEqual(result, expected)
+
+    def test_transform_datetime_london_to_ny(self):
+        result = transform_datetime("2023-03-11 16:30:00", "Europe/London",
+                                    "US/Eastern")
+        expected = "03/11/2023 Saturday 11:30"  # Updated expected value
+        self.assertEqual(result, expected)
+
+    def test_transform_datetime_london_to_tokyo(self):
+        result = transform_datetime("2023-03-11 16:30:00", "Europe/London",
+                                    "Asia/Tokyo")
+        expected = "03/12/2023 Sunday 01:30"
+        self.assertEqual(result, expected)
+
+
+if __name__ == '__main__':
+    unittest.main()
