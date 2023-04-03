@@ -6,3 +6,4 @@ test_your_code.py - In this file it has different types of test cases for the fi
 Running the program in vs code:
 first download and insert the file in vscode and run date_timezone.py file using command python3 date_timezone.py it shows the output in the specified format.
 After that the test_your_code.py test cases file using command python3 test_your_code.py it shows the testcases and their output for different timezones in the specified format.
+![IMG-6813](https://user-images.githubusercontent.com/127551976/229387313-59246560-66fd-4e2e-970c-d70f84e5926d.jpg)
