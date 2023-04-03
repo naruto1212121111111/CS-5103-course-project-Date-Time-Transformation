@@ -1,0 +1,8 @@
+A datetime string, the original timezone, and the destination timezone should be provided as input to the program.
+A datetime object in the original timezone should be created by the program from the datetime string.
+The datetime object needs to be localized by the program to the source timezone.
+The localized datetime object should be converted to the desired timezone.
+The program should normalize the converted datetime object to handle any daylight saving time changes or other timezone variations.
+The program should format the converted datetime object in the "mm/dd/yyyy Day HH:MM" format.
+The program should display the formatted datetime string.
+The program should return the formatted datetime string.
