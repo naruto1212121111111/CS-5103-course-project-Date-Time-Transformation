@@ -1,0 +1,4 @@
+The new transform_datetime function takes four arguments instead of three, with the additional apply_dst parameter allowing for the handling of daylight saving time changes or other timezone variations.
+The datetime_obj is now localized to the source timezone with the is_dst parameter passed to localize as apply_dst.
+The target_datetime object is now adjusted for daylight saving time changes if apply_dst is True. This is done by subtracting the duration of the timezone's DST from the target_datetime object.
+The target_datetime object is then normalized using the normalize method of the target timezone to handle any timezone variations.
