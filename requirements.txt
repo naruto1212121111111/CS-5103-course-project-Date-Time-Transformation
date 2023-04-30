@@ -1,8 +1,9 @@
-A datetime string, the original timezone, and the destination timezone should be provided as input to the program.
-A datetime object in the original timezone should be created by the program from the datetime string.
-The datetime object needs to be localized by the program to the source timezone.
-The localized datetime object should be converted to the desired timezone.
-The program should normalize the converted datetime object to handle any daylight saving time changes or other timezone variations.
-The program should format the converted datetime object in the "mm/dd/yyyy Day HH:MM" format.
-The program should display the formatted datetime string.
-The program should return the formatted datetime string.
+Functionality:
+The transform_datetime function takes a date-time string in the format of "YYYY-MM-DD HH:MM:SS", an original timezone, a target timezone, and an optional flag to apply daylight savings time (DST) adjustment. The function converts the date-time from the original timezone to the target timezone and returns the updated date-time in the format of "MM/DD/YYYY weekday HH:MM". The function also prints the updated date-time to the console.
+Input:
+datetime_str (str): A string representing a date-time in the format of "YYYY-MM-DD HH:MM:SS".
+original_tz (str): A string representing the original timezone of the date-time in the IANA Time Zone database format.
+target_tz (str): A string representing the target timezone of the date-time in the IANA Time Zone database format.
+apply_dst (bool, optional): A flag indicating whether to apply DST adjustment during timezone conversion. Defaults to True.
+output:
+A string representing the updated date-time in the format of "MM/DD/YYYY weekday HH:MM" which has the daylight saving requirement.
