@@ -7,4 +7,4 @@ Running the program in vs code:
 first download and insert the file in vscode and run date_timezone.py file using command python3 date_timezone.py it shows the output in the specified format.
 After that the test_your_code.py test cases file using command python3 test_your_code.py it shows the testcases and their output for different timezones in the specified format.
 <img width="1470" alt="Screen Shot 2023-04-30 at 10 51 58 AM" src="https://user-images.githubusercontent.com/127551976/235363217-0ee2ca48-5478-4aae-9cce-7aca51a40dcc.png">
-
+<img width="1470" alt="Screen Shot 2023-04-30 at 10 52 21 AM" src="https://user-images.githubusercontent.com/127551976/235363267-45f1cf0b-0daa-4f77-94bd-d210333867e7.png">
